@@ -10,6 +10,9 @@ def create_app(config_class=Config):
     from app.todos import bp as todos_bp
     app.register_blueprint(todos_bp, url_prefix='/todo')
 
+    from app.models.todo import db as todo_db
+    todo_db.init_app(app)
+
     return app
 
 # from app import models

@@ -34,3 +34,13 @@ flask run
 ```
 export FLASK_DEBUG=1
 ```
+
+### Миграции
+Инициилизация миграции (только в первый раз)
+```python migrate.py db init```
+Запуск миграции
+```python migrate.py db migrate```
+Применение миграции
+```python migrate.py db upgrade```
+
+Если вы используете SQLite, то получившийся .db файл нужно перенести в папку app
