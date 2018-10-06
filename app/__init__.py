@@ -1,14 +1,15 @@
-from flask import Flask, request, current_app
+from flask import Flask
 from config import Config
 
+
 def create_app(config_class=Config):
-  app = Flask(__name__)
-  app.config.from_object(config_class)
+    app = Flask(__name__)
+    app.config.from_object(config_class)
 
-  # blueprints
-  from app.todos import bp as todos_bp
-  app.register_blueprint(todos_bp, url_prefix='/todo')
+    # blueprints
+    from app.todos import bp as todos_bp
+    app.register_blueprint(todos_bp, url_prefix='/todo')
 
-  return app
+    return app
 
 # from app import models

@@ -1,5 +1,6 @@
-from app.todos import bp
+from flask_restful import Resource
 
-@bp.route('/')
-def hello_world():
-  return 'Hello world'
+
+class Hello(Resource):
+    def get(self):
+        return {"message": "Hello, World!"}
