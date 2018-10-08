@@ -1,1 +1,1 @@
-web: flask db upgrade; flask translate compile; gunicorn todoList:app
+web: flask db upgrade; gunicorn todoList:app
