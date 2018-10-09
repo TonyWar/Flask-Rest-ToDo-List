@@ -17,6 +17,8 @@ pip install python-dotenv
 ```
 Сохранить список зависимостей
 ```pip freeze > requirements.txt```
+Если есть проблемы с pkg-resources
+```pip freeze | grep -v "pkg-resources" > requirements.txt```
 Установить список зависимостей
 ```pip install -r requirements.txt```
 
@@ -44,3 +46,6 @@ export FLASK_DEBUG=1
 ```python migrate.py db upgrade```
 
 Если вы используете SQLite, то получившийся .db файл нужно перенести в папку app
+
+### Heroku
+```git push heroku master```
